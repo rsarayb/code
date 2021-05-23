@@ -1,0 +1,147 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 15px;
+    background: rgb(234, 243, 245);
+}
+
+.weather-table{
+    width: 100%;
+    text-align: left;
+}
+
+.weather-table, .row, .column {
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+
+.input-weather {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.city-input{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.city-name {
+    font-size: 3.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.table-header {
+    background: rgb(175, 223, 226);
+}
+
+.column {
+    padding: 20px;
+}
+
+.ciudad {
+    padding: 10px;
+    border:none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    background: none;
+}
+
+.buttom {
+    background: none;
+    outline:none;
+    border: 2px solid #000;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    margin-left: 10px;
+}
+
+.row{
+    font-size: 1.2em;
+}
+
+.buttom:hover {
+    background: rgba(0,0,0,.3);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width:768px) {
+
+    .input-weather {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .city-input {
+        flex-direction: column;
+    }
+
+    .city-name {
+        font-size: 2.3em;
+    }
+    
+    .column {
+        display: block;
+        padding-left: 55%;
+        position: relative;
+    }
+
+    .table-header {
+        position: absolute;
+        display: none; 
+    }
+
+    .buttom {
+        font-size: 0.8em;
+        margin-top: 15px;
+    }
+
+ 
+   
+    .column:nth-of-type(1):before {
+        content: "Temperatura";
+    }
+    .column:nth-of-type(2):before {
+        content: "Sensasión";
+    }
+    .column:nth-of-type(3):before {
+        content: "UV";
+    }
+    .column:nth-of-type(4):before {
+        content: "Humedad";
+    }
+    .column:nth-of-type(5):before {
+        content: "Nubosidad";
+    }
+  
+    .column:before{
+        position:absolute;
+        left:0;
+        bottom: 0;
+        padding:20px 0 0 5px;
+        font-weight: 700;
+        background: rgb(175, 223, 226);
+        height: 100%;
+        width: 50%;
+    }
+
+
+
+
+}

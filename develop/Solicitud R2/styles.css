@@ -1,0 +1,106 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.wrapper {
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+ 
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    margin: 0 20px;
+    
+}
+
+.table, .row, .column {
+    border: 1px solid lightblue;
+    border-collapse: collapse;
+}
+
+.column {
+    padding: 5px;
+}
+
+
+.row:nth-child(odd) {
+    background-color: rgb(175, 223, 226);
+}
+
+.row-header:first-child{
+    background: none;
+}
+
+@media only screen and (max-width:768px) {
+
+    .table-header {
+        position: absolute;
+        display: none;
+    }
+
+
+
+    .table {
+        margin: 10px 20px;
+    }
+
+    .column {
+        display: block;
+        padding-left: 50%;
+        position: relative;    
+    }
+
+    .row:nth-child(odd) {
+        background: none;
+    }
+
+    .row {
+        border-bottom: 2px solid #000;
+    }
+
+    .column:before {
+        position:absolute;
+        left:0;
+        bottom: 0;
+        padding-left: 5px;
+        font-weight: 700;
+        background: rgb(175, 223, 226);
+        height: 100%;
+        width: 45%;
+
+    }
+
+    .column:nth-of-type(1):before {
+        content: "Nombre";
+    }
+    .column:nth-of-type(2):before {
+        content: "Edad";
+    }
+    .column:nth-of-type(3):before {
+        content: "Dato #1";
+    }
+    .column:nth-of-type(4):before {
+        content: "Dato #2";
+    }
+    .column:nth-of-type(5):before {
+        content: "Dato #3";
+    }
+    .column:nth-of-type(6):before {
+        content: "Dato #4";
+    }
+
+
+
+
+}
+
+

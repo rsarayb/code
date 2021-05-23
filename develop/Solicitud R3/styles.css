@@ -1,0 +1,114 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.wrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    gap:20px;
+}
+
+.video-title {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.modal-container {
+    background: rgba(0,0,0,.5);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    top:-9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.modal-container.open {
+    opacity:1;
+    top:0;
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-buttom {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top:0;bottom:0;left:0;right:0;
+    margin: auto;
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-play {
+    font-size: 3em;
+}
+
+
+.fa-times {
+    font-size: 2em;
+    color: #f3f3f3;
+    position:absolute;
+    top:3rem;
+    right: 2rem;
+}
+
+.fa-times:hover {
+    color:red;
+    cursor: pointer;
+}
+
+.fa-play:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+
+.video-buttom.open {
+    opacity: 0;
+    position: absolute;
+    top:-9999px;
+}
+
+.video-buttom:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 760px) {
+
+    .wrapper {
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center; 
+    }
+
+    .video-description {
+        padding: 40px;
+    }
+
+    .fa-times {
+        top:3rem;
+    }
+    
+}
